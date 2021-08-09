@@ -1,0 +1,59 @@
+@import '../colors';
+@import '../fonts';
+
+.container__landing {
+	position: relative;
+	height: max-content;
+	width: 100%;
+
+	@media screen and (max-width: 768px) {
+		min-height: 80vh !important;
+		width: auto;
+		background: url('../../images/desktop/image-header.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		&__background {
+			display: none !important;
+		}
+
+		&__content {
+			&__title {
+				margin-bottom: 50px !important;
+			}
+		}
+	}
+
+	&__content {
+		color: white;
+		position: absolute;
+		top: 0;
+		padding-top: calc(max(120px, 10vw));
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&__title {
+			font-family: $fraunces;
+			font-weight: 900;
+			letter-spacing: 3px;
+			font-size: 2.5rem;
+			margin-bottom: 80px;
+			text-align: center;
+		}
+
+		&__arrow {
+			max-height: 75px;
+		}
+	}
+
+	&__background {
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+}
