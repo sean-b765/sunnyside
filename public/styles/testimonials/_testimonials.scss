@@ -1,0 +1,102 @@
+@import '../fonts';
+@import '../colors';
+
+.testimonials {
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.testimonials {
+		max-width: 1200px;
+		padding: 9rem 2rem 9rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&__title {
+			font-family: $fraunces;
+			letter-spacing: 2px;
+			color: $neutral-gray-blue3;
+		}
+
+		&__profiles {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			&__profile {
+				margin: 20px;
+				max-width: 300px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-direction: column;
+				margin-top: 60px;
+
+				&__avatar {
+					position: relative;
+					max-width: 80px;
+					max-height: 80px;
+					border-radius: 50%;
+					overflow: hidden;
+					margin-bottom: 40px;
+
+					> img {
+						position: relative;
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				&__text,
+				&__name {
+					font-family: $barlow;
+					font-weight: 600;
+					color: $neutral-gray-blue;
+				}
+
+				&__text {
+					line-height: 1.7em;
+					text-align: center;
+					margin-bottom: 40px;
+				}
+
+				&__name {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+
+					&__name {
+						font-family: $fraunces;
+						font-weight: 900;
+						color: $neutral-darker-blue;
+						font-size: 1.3rem;
+					}
+					&__role {
+						font-weight: 400;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			padding: 4rem 2rem;
+
+			&__profiles__profile {
+				&__avatar {
+					margin-bottom: 30px;
+				}
+				&__text {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
