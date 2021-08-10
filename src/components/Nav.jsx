@@ -15,7 +15,7 @@ const Nav = () => {
 	}
 
 	return (
-		<div className="header" role="banner">
+		<header className="header">
 			<motion.img
 				initial={{ opacity: 0, scale: 0 }}
 				animate={{
@@ -27,88 +27,91 @@ const Nav = () => {
 				alt="sunnyside"
 				className="header__logo"
 			/>
-			<nav role="navigation">
+			<nav>
 				<ul>
 					<motion.li
 						initial={initial}
 						animate={animate}
 						transition={{ ...transition, delay: 0.5 }}
 					>
-						About
+						<a href="#">About</a>
 					</motion.li>
 					<motion.li
 						initial={initial}
 						animate={animate}
 						transition={{ ...transition, delay: 0.75 }}
 					>
-						Services
+						<a href="#">Services</a>
 					</motion.li>
 					<motion.li
 						initial={initial}
 						animate={animate}
 						transition={{ ...transition, delay: 1 }}
 					>
-						Projects
+						<a href="#">Projects</a>
 					</motion.li>
 				</ul>
 
+				{/* Desktop contact button */}
 				<motion.button
 					initial={initial}
 					animate={animate}
 					transition={{ ...transition, delay: 1.25 }}
 					className="btn btn-contact"
-					role="button"
 				>
 					CONTACT
 				</motion.button>
 
+				{/* Mobile menu button */}
 				<motion.button
 					initial={initial}
 					animate={animate}
 					transition={{ ...transition, delay: 0.25 }}
 					className="btn btn-menu"
-					role="button"
 					onClick={() => setOpen(!open)}
 				>
 					<img src="./images/icon-hamburger.svg" alt="Open mobile menu" />
 				</motion.button>
 
-				<div className={open ? 'menu-mobile open' : 'menu-mobile'} role="menu">
+				<section
+					className={open ? 'menu-mobile open' : 'menu-mobile'}
+					role="menu"
+				>
 					<ul>
 						<motion.li
 							initial={initial}
 							animate={animate}
 							transition={{ ...transition, delay: 0.1 }}
 						>
-							About
+							<a href="#">About</a>
 						</motion.li>
 						<motion.li
 							initial={initial}
 							animate={animate}
 							transition={{ ...transition, delay: 0.2 }}
 						>
-							Services
+							<a href="#">Services</a>
 						</motion.li>
 						<motion.li
 							initial={initial}
 							animate={animate}
 							transition={{ ...transition, delay: 0.3 }}
 						>
-							Projects
+							<a href="#">Projects</a>
 						</motion.li>
-						<motion.button
-							initial={initial}
-							animate={animate}
-							transition={{ ...transition, delay: 0.4 }}
-							className="btn btn-contact--mobile"
-							role="button"
-						>
-							CONTACT
-						</motion.button>
 					</ul>
-				</div>
+
+					<motion.button
+						initial={initial}
+						animate={animate}
+						transition={{ ...transition, delay: 0.4 }}
+						className="btn btn-contact--mobile"
+					>
+						CONTACT
+					</motion.button>
+				</section>
 			</nav>
-		</div>
+		</header>
 	)
 }
 

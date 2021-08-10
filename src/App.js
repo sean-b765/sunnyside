@@ -9,12 +9,12 @@ function App() {
 	return (
 		<>
 			<Nav />
-			<div className="container" role="group">
+			<main className="container">
 				<Landing />
 				<ContentGrid />
 				<Testimonials />
 				<ImageGrid />
-			</div>
+			</main>
 			<Footer />
 		</>
 	)

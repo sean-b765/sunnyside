@@ -2,7 +2,7 @@ import React from 'react'
 
 const ImageGrid = () => {
 	return (
-		<section className="image-grid">
+		<div className="image-grid" aria-hidden="true">
 			<div className="img img1">
 				<img
 					src="./images/desktop/image-gallery-milkbottles.jpg"
@@ -24,7 +24,7 @@ const ImageGrid = () => {
 					alt="Sugarcubes"
 				/>
 			</div>
-		</section>
+		</div>
 	)
 }
 

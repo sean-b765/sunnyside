@@ -27,7 +27,7 @@
 		}
 
 		nav > .menu-mobile {
-			display: block !important;
+			display: flex !important;
 		}
 
 		nav .btn-menu {
@@ -50,6 +50,9 @@
 			}
 
 			display: none;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
 			transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 			opacity: 0;
 			position: absolute;
@@ -83,6 +86,17 @@
 				align-items: center;
 				justify-content: center;
 				flex-direction: column;
+
+				li {
+					a,
+					button {
+						color: $primary-dark-blue !important;
+
+						&:hover {
+							color: $primary-dark-blue !important;
+						}
+					}
+				}
 			}
 
 			button {
@@ -99,11 +113,6 @@
 			background: none !important;
 			border: none;
 			cursor: pointer;
-			opacity: 0.6;
-
-			&:hover {
-				opacity: 1;
-			}
 		}
 
 		ul {
@@ -117,17 +126,30 @@
 				padding: 1rem 1.5rem;
 				font-family: $barlow;
 				font-weight: 600;
-				opacity: 0.8;
 				cursor: pointer;
 
-				&:hover {
-					opacity: 1;
+				a {
+					color: rgba(255, 255, 255, 0.719);
+					text-decoration: none;
+					transition: all 0.1s linear;
+
+					&:hover {
+						color: white;
+					}
 				}
 			}
 		}
 	}
 
-	button:not(.btn-menu, .btn-contact--mobile) {
+	.btn-contact--mobile {
+		padding: 14px 22px;
+		border-radius: 30px;
+		border: none;
+		font-family: $fraunces;
+		cursor: pointer;
+	}
+
+	.btn-contact {
 		background: $white;
 		padding: 14px 22px;
 		border-radius: 30px;

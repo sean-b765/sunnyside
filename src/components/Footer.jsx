@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
 	return (
-		<footer role="contentinfo" className="footer">
+		<footer className="footer">
 			<div className="footer__logo">
 				<svg width="124" height="24" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -12,22 +12,50 @@ const Footer = () => {
 					/>
 				</svg>
 			</div>
-			<div className="footer__nav">
-				<a href="#" className="footer__nav__item">
-					About
-				</a>
-				<a href="#" className="footer__nav__item">
-					Services
-				</a>
-				<a href="#" className="footer__nav__item">
-					Portfolio
-				</a>
-			</div>
+
+			<nav className="footer__nav">
+				<ul>
+					<li>
+						<a href="#" className="footer__nav__item">
+							About
+						</a>
+					</li>
+					<li>
+						<a href="#" className="footer__nav__item">
+							Services
+						</a>
+					</li>
+					<li>
+						<a href="#" className="footer__nav__item">
+							Portfolio
+						</a>
+					</li>
+				</ul>
+			</nav>
+
 			<div className="footer__social">
-				<img src="./images/icon-facebook.svg" alt="Facebook" />
-				<img src="./images/icon-instagram.svg" alt="Instagram" />
-				<img src="./images/icon-twitter.svg" alt="Twitter" />
-				<img src="./images/icon-pinterest.svg" alt="Pinterest" />
+				<ul>
+					<li>
+						<a href="#" aria-label="Visit our Facebook">
+							<img src="./images/icon-facebook.svg" alt="Facebook" />
+						</a>
+					</li>
+					<li>
+						<a href="#" aria-label="Visit our Instagram">
+							<img src="./images/icon-instagram.svg" alt="Instagram" />
+						</a>
+					</li>
+					<li>
+						<a href="#" aria-label="Visit our Twitter">
+							<img src="./images/icon-twitter.svg" alt="Twitter" />
+						</a>
+					</li>
+					<li>
+						<a href="#" aria-label="Visit our Pinterest">
+							<img src="./images/icon-pinterest.svg" alt="Pinterest" />
+						</a>
+					</li>
+				</ul>
 			</div>
 		</footer>
 	)

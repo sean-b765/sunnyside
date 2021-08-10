@@ -5,12 +5,14 @@ const Testimonials = () => {
 	return (
 		<section className="testimonials">
 			<div className="testimonials">
-				<motion.h3 className="testimonials__title">
-					CLIENT TESTIMONIALS
-				</motion.h3>
+				<header>
+					<motion.h2 className="testimonials__title">
+						CLIENT TESTIMONIALS
+					</motion.h2>
+				</header>
 
-				<div className="testimonials__profiles">
-					<div className="testimonials__profiles__profile">
+				<section className="testimonials__profiles">
+					<section className="testimonials__profiles__profile">
 						<div className="testimonials__profiles__profile__avatar">
 							<img src="./images/image-emily.jpg" alt="Portrait of Emily" />
 						</div>
@@ -28,9 +30,9 @@ const Testimonials = () => {
 								Marketting Director
 							</p>
 						</div>
-					</div>
+					</section>
 
-					<div className="testimonials__profiles__profile">
+					<section className="testimonials__profiles__profile">
 						<div className="testimonials__profiles__profile__avatar">
 							<img src="./images/image-thomas.jpg" alt="Portrait of Thomas" />
 						</div>
@@ -48,9 +50,9 @@ const Testimonials = () => {
 								Chief Operating Officer
 							</p>
 						</div>
-					</div>
+					</section>
 
-					<div className="testimonials__profiles__profile">
+					<section className="testimonials__profiles__profile">
 						<div className="testimonials__profiles__profile__avatar">
 							<img src="./images/image-jennie.jpg" alt="Portrait of Emily" />
 						</div>
@@ -68,8 +70,8 @@ const Testimonials = () => {
 								Business Owner
 							</p>
 						</div>
-					</div>
-				</div>
+					</section>
+				</section>
 			</div>
 		</section>
 	)
