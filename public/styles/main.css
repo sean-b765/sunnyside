@@ -1,6 +1,6 @@
 .header {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,6 +17,7 @@
           flex-direction: row;
   color: white;
   padding: 30px 25px;
+  background: #3dbefe;
 }
 
 .header__logo {
@@ -25,6 +26,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    padding: 15px 25px;
+  }
   .header nav > ul {
     display: none !important;
   }
@@ -171,6 +175,7 @@
   padding: 1rem 1.5rem;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -283,6 +288,7 @@
 }
 
 .grid__split {
+  overflow: hidden;
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -468,9 +474,17 @@
   line-height: 1.4rem;
 }
 
+.grid__split__image--graphic-design {
+  background: #99d9c9;
+}
+
 .grid__split__image--graphic-design .title,
 .grid__split__image--graphic-design .text {
   color: #25564b;
+}
+
+.grid__split__image--photography {
+  background: #56c7ff;
 }
 
 .grid__split__image--photography .title,

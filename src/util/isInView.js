@@ -19,11 +19,11 @@ const useInView = () => {
 
 	useEffect(() => {
 		const updateIfInView = () => {
-			setIsInView(checkIfInView())
+			!isInView && setIsInView(checkIfInView())
 		}
 
 		// on initial effect, check if this element is in view and set the state accordingly
-		setIsInView(checkIfInView())
+		!isInView && setIsInView(checkIfInView())
 
 		window.addEventListener('scroll', updateIfInView)
 

@@ -6,6 +6,7 @@
 	width: 100%;
 
 	&__split {
+		overflow: hidden;
 		position: relative;
 		width: 100%;
 		display: flex;
@@ -158,12 +159,14 @@
 			}
 
 			&--graphic-design {
+				background: #99d9c9;
 				.title,
 				.text {
 					color: $primary-dark-cyan;
 				}
 			}
 			&--photography {
+				background: #56c7ff;
 				.title,
 				.text {
 					color: $primary-dark-blue;

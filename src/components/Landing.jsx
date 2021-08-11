@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import React from 'react'
 
 const Landing = () => {
@@ -11,16 +10,17 @@ const Landing = () => {
 			/>
 
 			<section className="landing__content">
-				<motion.h1
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1, transition: { delay: 0.5 } }}
+				<h1
 					className="landing__content__title"
+					data-aos="fade-down"
+					data-aos-duration="1500"
 				>
 					WE ARE CREATIVES
-				</motion.h1>
-				<motion.img
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1, transition: { delay: 1 } }}
+				</h1>
+				<img
+					data-aos="fade-in"
+					data-aos-duration="1000"
+					data-aos-delay="750"
 					className="landing__content__arrow"
 					src="./images/icon-arrow-down.svg"
 					alt="Scroll Below"

@@ -4,111 +4,60 @@ import React, { useState } from 'react'
 const Nav = () => {
 	const [open, setOpen] = useState(false)
 
-	const initial = {
-		opacity: 0,
-	}
-	const animate = {
-		opacity: 1,
-	}
-	const transition = {
-		duration: 0.5,
-	}
-
 	return (
 		<header className="header">
-			<motion.img
-				initial={{ opacity: 0, scale: 0 }}
-				animate={{
-					opacity: 1,
-					scale: 1,
-					transition: { delay: 0.25, duration: 0.5 },
-				}}
+			<img
+				data-aos="zoom-in"
+				data-aos-duration="500"
+				data-aos-delay="1000"
 				src="./images/logo.svg"
 				alt="sunnyside"
 				className="header__logo"
 			/>
 			<nav>
 				<ul>
-					<motion.li
-						initial={initial}
-						animate={animate}
-						transition={{ ...transition, delay: 0.5 }}
-					>
+					<li data-aos="fade-in" data-aos-delay="1250">
 						<a href="#">About</a>
-					</motion.li>
-					<motion.li
-						initial={initial}
-						animate={animate}
-						transition={{ ...transition, delay: 0.75 }}
-					>
+					</li>
+					<li data-aos="fade-in" data-aos-delay="1500">
 						<a href="#">Services</a>
-					</motion.li>
-					<motion.li
-						initial={initial}
-						animate={animate}
-						transition={{ ...transition, delay: 1 }}
-					>
+					</li>
+					<li data-aos="fade-in" data-aos-delay="1750">
 						<a href="#">Projects</a>
-					</motion.li>
+					</li>
 				</ul>
 
 				{/* Desktop contact button */}
-				<motion.button
-					initial={initial}
-					animate={animate}
-					transition={{ ...transition, delay: 1.25 }}
+				<button
 					className="btn btn-contact"
+					data-aos="fade-in"
+					data-aos-delay="2000"
 				>
 					CONTACT
-				</motion.button>
+				</button>
 
 				{/* Mobile menu button */}
-				<motion.button
-					initial={initial}
-					animate={animate}
-					transition={{ ...transition, delay: 0.25 }}
-					className="btn btn-menu"
-					onClick={() => setOpen(!open)}
-				>
+				<button className="btn btn-menu" onClick={() => setOpen(!open)}>
 					<img src="./images/icon-hamburger.svg" alt="Open mobile menu" />
-				</motion.button>
+				</button>
 
 				<section
 					className={open ? 'menu-mobile open' : 'menu-mobile'}
 					role="menu"
 				>
 					<ul>
-						<motion.li
-							initial={initial}
-							animate={animate}
-							transition={{ ...transition, delay: 0.1 }}
-						>
+						<li>
 							<a href="#">About</a>
-						</motion.li>
-						<motion.li
-							initial={initial}
-							animate={animate}
-							transition={{ ...transition, delay: 0.2 }}
-						>
+						</li>
+						<li>
 							<a href="#">Services</a>
-						</motion.li>
-						<motion.li
-							initial={initial}
-							animate={animate}
-							transition={{ ...transition, delay: 0.3 }}
-						>
+						</li>
+						<li>
 							<a href="#">Projects</a>
-						</motion.li>
+						</li>
 					</ul>
 
-					<motion.button
-						initial={initial}
-						animate={animate}
-						transition={{ ...transition, delay: 0.4 }}
-						className="btn btn-contact--mobile"
-					>
-						CONTACT
-					</motion.button>
+					<button className="btn btn-contact--mobile">CONTACT</button>
 				</section>
 			</nav>
 		</header>

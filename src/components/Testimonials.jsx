@@ -5,14 +5,17 @@ const Testimonials = () => {
 	return (
 		<section className="testimonials">
 			<div className="testimonials">
-				<header>
-					<motion.h2 className="testimonials__title">
-						CLIENT TESTIMONIALS
-					</motion.h2>
+				<header data-aos="fade-right">
+					<h2 className="testimonials__title">CLIENT TESTIMONIALS</h2>
 				</header>
 
 				<section className="testimonials__profiles">
-					<section className="testimonials__profiles__profile">
+					<section
+						className="testimonials__profiles__profile"
+						data-aos="fade-in"
+						data-aos-delay="200"
+						data-aos-duration="1500"
+					>
 						<div className="testimonials__profiles__profile__avatar">
 							<img src="./images/image-emily.jpg" alt="Portrait of Emily" />
 						</div>
@@ -32,7 +35,12 @@ const Testimonials = () => {
 						</div>
 					</section>
 
-					<section className="testimonials__profiles__profile">
+					<section
+						className="testimonials__profiles__profile"
+						data-aos="fade-in"
+						data-aos-delay="500"
+						data-aos-duration="1500"
+					>
 						<div className="testimonials__profiles__profile__avatar">
 							<img src="./images/image-thomas.jpg" alt="Portrait of Thomas" />
 						</div>
@@ -52,7 +60,12 @@ const Testimonials = () => {
 						</div>
 					</section>
 
-					<section className="testimonials__profiles__profile">
+					<section
+						className="testimonials__profiles__profile"
+						data-aos="fade-in"
+						data-aos-duration="1500"
+						data-aos-delay="800"
+					>
 						<div className="testimonials__profiles__profile__avatar">
 							<img src="./images/image-jennie.jpg" alt="Portrait of Emily" />
 						</div>
