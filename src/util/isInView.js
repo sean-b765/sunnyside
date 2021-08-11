@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // Custom hook for checking if the element (ref) is in view
 const useInView = () => {
@@ -34,7 +34,7 @@ const useInView = () => {
 	}, [])
 
 	// return the ref for use in component
-	//  isInView to use with framer-motion to animate
+	//  isInView bool
 	return [ref, isInView]
 }
 
